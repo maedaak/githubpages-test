@@ -1,0 +1,72 @@
+<!doctype html>
+<HTML>
+<head>
+<meta charset="utf-8">
+<title>勝手CiNii Articles検索窓</title>
+<SCRIPT type=text/javascript>
+<!--
+function search() {
+    // ベースとなるURLを設定
+    var myTree  = 'https://ci.nii.ac.jp/search?range=0&count=&sortorder=&type=0';
+
+    // フォームからキーワードを入手
+    var keyword = document.getElementById("key").value;
+    var field = document.getElementById("field").value;
+
+    // フォームにキーワード書き戻し（入力したキーワードが消えないようにする
+    document.getElementById("key").value = keyword;
+
+    // キーワードが空のときはアラートを出す
+    if (keyword == "") { alert("キーワードを入れてください"); }
+    else {
+       var URI_parameter = "";
+       var SEARCH_URL    = "";
+       // UTF8 でURIエンコード
+       URI_parameter = encodeURI(keyword);
+       if (field != "") {
+           URI_parameter = field + '=' + URI_parameter;
+       }
+       URI_parameter = '&' + URI_parameter;
+       SEARCH_URL = myTree.concat(URI_parameter);
+       window.location.replace(SEARCH_URL);
+    }
+}
+
+function enterkey_down(key) {
+    if(key === "Enter"){
+        search();
+    }
+}
+//-->
+</script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body  class="m-5">
+
+<h1>勝手CiNii Articles検索窓</h1>
+
+<!------■検索フォームはじめ■------>
+<p class="lead">キーワードを入力してください</p>
+<div class="row"><div class="col-xs-10">
+    <input class="form-control form-control-lg" size=50 name="key" id="key" onkeypress="enterkey_down(event.key);">
+</div>
+<p><p>
+<div class="row"><div class="col-xs-3">
+<select class="form-control  w-25" name="field" id="field">
+    <option value="q">全ての項目</option>
+    <option value="title">タイトル</option>
+    <option value="author">著者</option>
+    <option value="journal">刊行物</option>
+    <option value="publisher">出版社</option>
+</select>
+</div>
+</p>
+<input class="btn btn-primary w-25" type=button value="検索" onClick="search()">
+<br>
+<input class="btn btn-secondary w-25" type=reset value="クリア"><br></td>
+<!------■フォームおわり■------>
+
+</body>
+</html>
