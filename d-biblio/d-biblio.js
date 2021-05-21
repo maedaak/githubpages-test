@@ -22,7 +22,7 @@ window.onload = function() {
    	   core.rootScene.addChild(label1);
    	   var count = 0;
    	   
-   	   var label2 = new Label("司書太郎著");
+   	   var label2 = new Label("前田朗著");
    	   label2.color = 'green';
    	   label2.font =  "30px 'HG正楷書体-PRO'";
    	   label2.x = 500;
