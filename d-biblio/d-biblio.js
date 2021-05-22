@@ -14,7 +14,7 @@ window.onload = function() {
    	   bg.image = core.assets['moon.png'];
    	   core.rootScene.addChild(bg);
 
-   	   var label1 = new Label("図書館員のアプリ開発本");
+   	   var label1 = new Label("図書館員アプリ開発本");
    	   label1.color = '#0000FF';
    	   label1.font =  "italic bold 30px 'HG正楷書体-PRO'";
    	   label1.x = 200;
