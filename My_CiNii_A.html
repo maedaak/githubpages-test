@@ -49,23 +49,22 @@ function enterkey_down(key) {
 
 <!------■検索フォームはじめ■------>
 <p class="lead">キーワードを入力してください</p>
-<div class="row"><div class="col-xs-10">
-    <input class="form-control form-control-lg" size=50 name="key" id="key" onkeypress="enterkey_down(event.key);">
-</div>
-<p><p>
-<div class="row"><div class="col-xs-3">
-<select class="form-control  w-25" name="field" id="field">
-    <option value="q">全ての項目</option>
-    <option value="title">タイトル</option>
-    <option value="author">著者</option>
-    <option value="journal">刊行物</option>
-    <option value="publisher">出版社</option>
-</select>
+<div class="row">
+    <div class="col-md-8">
+        <input class="form-control form-control-lg" size=50 name="key" id="key" onkeypress="enterkey_down(event.key);">
+    </div>
+    <div class="col-md-4">
+        <select class="form-control" name="field" id="field">
+            <option value="q">全ての項目</option>
+            <option value="title">タイトル</option>
+            <option value="author">著者</option>
+            <option value="journal">刊行物</option>
+            <option value="publisher">出版社</option>
+        </select>
+    </div>
 </div>
 </p>
-<input class="btn btn-primary w-25" type=button value="検索" onClick="search()">
-<br>
-<input class="btn btn-secondary w-25" type=reset value="クリア"><br></td>
+<button class="btn btn-primary w-25" onClick="search()">検索</button>
 <!------■フォームおわり■------>
 
 </body>
