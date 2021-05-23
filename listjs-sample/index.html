@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>図書館関係本リストをキーワードで絞り込み</h1>
-<div id="users">
+<div id="listdata">
   <input class="search" placeholder="Search" size="50" />
 <P>
 <ul class="pagination"></ul><br>
@@ -816,7 +816,7 @@
         page: 10,
         pagination: true
     };
-    var userList = new List('users', options);
+    var userList = new List('listdata', options);
     userList.on('searchComplete', function(a){
         $("#hits").html(a.matchingItems.length);
     });
