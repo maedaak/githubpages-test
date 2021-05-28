@@ -819,9 +819,10 @@
     };
     var List = new List('listdata', options);
     $('#search').blur(function() {
-        //List.on('searchComplete', function(a){
-            $("#hits").html(a.matchingItems.length);
-        //});
+        $("#hits").html(a.matchingItems.length);
+    };
+    List.on('searchComplete', function(a){
+        $("#hits").html(a.matchingItems.length);
     });
 
 </script>
