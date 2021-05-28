@@ -820,7 +820,7 @@
     var List = new List('listdata', options);
     $('#search').blur(function() {
         $("#hits").html(a.matchingItems.length);
-    };
+    });
     List.on('searchComplete', function(a){
         $("#hits").html(a.matchingItems.length);
     });
