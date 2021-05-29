@@ -50,16 +50,16 @@ function enterkey_down(key) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <div class="container-fluid">
-<h1>勝手CiNii Articles検索窓</h1>
+  <h1>勝手CiNii Articles検索窓</h1>
 
-<!------■検索フォームはじめ■------>
-<p class="lead">キーワードを入力してください</p>
-<div class="row">
-    <div class="col-md-8">
+  <!------■検索フォームはじめ■------>
+  <p class="lead">検索窓</p>
+  <div class="row">
+    <div class="col-md-8 form-group">
         <input class="form-control form-control-lg" size=50 name="key" id="key" onkeypress="enterkey_down(event.key);">
     </div>
-    <div class="col-md-4">
-        <select class="form-control" name="field" id="field">
+    <div class="col-md-4 form-group">
+        <select class="form-control custom-select" name="field" id="field">
             <option value="q">全ての項目</option>
             <option value="title">タイトル</option>
             <option value="author">著者</option>
@@ -67,10 +67,10 @@ function enterkey_down(key) {
             <option value="publisher">出版社</option>
         </select>
     </div>
-</div>
-</p>
-<button class="btn btn-primary w-25" onClick="search()">検索</button>
-<!------■フォームおわり■------>
+  </div>
+  </p>
+  <button class="btn btn-primary w-25" onClick="search()">検索</button>
+  <!------■フォームおわり■------>
 </div>
 </body>
 </html>
