@@ -818,20 +818,14 @@
         pagination: true
     };
     var List = new List('listdata', options);
-    $('#search').onkeyup(function() {
-      let e = Event('onchange');
-      let target = document.getElementById('search');
-      target.dispatchEvent(e);
-      //  $("#hits").html(a.matchingItems.length);
-    });
-    $('#search').onkeydown(function() {
-      let e = Event('onchange');
-      let target = document.getElementById('search');
-      target.dispatchEvent(e);
-      //  $("#hits").html(a.matchingItems.length);
-    });
     List.on('searchComplete', function(a){
         $("#hits").html(a.matchingItems.length);
+    });
+    $('#search').change(function() {
+	    List.filter(function(item) {
+	      return true;
+      });
+      $("#hits").html(userList.size);
     });
 
 </script>
