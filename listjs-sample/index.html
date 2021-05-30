@@ -821,7 +821,7 @@
     List.on('searchComplete', function(a){
         $("#hits").html(a.matchingItems.length);
     });
-    $('#search').change(function() {
+    $('#search').keyup(function() {
 	    List.filter(function(item) {
 	      return true;
       });
