@@ -10,6 +10,7 @@
   <h1>図書館関係本リストをキーワードで絞り込み</h1>
 <div id="listdata">
   <input id="search" class="search" placeholder="Search" size="50" />
+  <button id="button">検索</button>
   ※　NCIDと刊行年月日は対象外
 <P>
 <ul class="pagination"></ul><br>
@@ -821,7 +822,7 @@
     List.on('searchComplete', function(a){
         $("#hits").html(a.matchingItems.length);
     });
-    $('#search').keydown(function() {
+    $('#button').click(function() {
 	    List.filter(function(item) {
 	      return true;
       });
