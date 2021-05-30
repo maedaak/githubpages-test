@@ -819,7 +819,16 @@
     };
     var List = new List('listdata', options);
     $('#search').onkeyup(function() {
-        $("#hits").html(a.matchingItems.length);
+      let e = Event('onchange');
+      let target = document.getElementById('search');
+      target.dispatchEvent(e);
+      //  $("#hits").html(a.matchingItems.length);
+    });
+    $('#search').onkeydown(function() {
+      let e = Event('onchange');
+      let target = document.getElementById('search');
+      target.dispatchEvent(e);
+      //  $("#hits").html(a.matchingItems.length);
     });
     List.on('searchComplete', function(a){
         $("#hits").html(a.matchingItems.length);
