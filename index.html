@@ -17,30 +17,69 @@
     <div class="alert alert-primary alert-dismissible fade show" role="alert">
       <strong>このサイトにあるページは練習なのでうごかないことがあります</strong>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">×</span>
+        <span aria-hidden="true">×</span>
       </button>
     </div>
     Webサイト作成の練習をしています
     <p class="lead my-5">作りかけのタブメニュー</p>
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a href="#" class="nav-link acctive">Home</a>
+        <a href="#home" class="nav-link active" data-toggle="tab">Home</a>
       </li>
       <li class="nav-item">
-        <a href="./carousel" class="nav-link">写真</a>
+        <a href="#photo" class="nav-link" data-toggle="tab">写真</a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link disabled">予約2</a>
+        <a href="#" class="nav-link disabled" data-toggle="tab">予約1</a>
       </li>
     </ul>
-    <p class="lead my-5">テストページ一覧</p>
-    <ul>
-      <li><a href="./myCiNiiA">bootstrapを使った勝手CiNii Articles検索窓</a>
-      <li><a href="./d-biblio">enchant.jsを使った図書宣伝をイメージした動画</a>
-      <li><a href="./listjs-sample">List.jsをつかった図書館関係本リストの絞り込み</a>
-      <li><a href="./googlechart-sample">Google Chartによるサービス月次統計グラフ</a>
-      </a>
-    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="home">
+        <h2 class="my-5">テストページ一覧</h2>
+        <ul>
+          <li>
+            <a href="./myCiNiiA">bootstrapを使った勝手CiNii Articles検索窓</a>
+          </li>
+          <li>
+            <a href="./d-biblio">enchant.jsを使った図書宣伝をイメージした動画</a>
+          </li>
+          <li>
+            <a href="./listjs-sample">List.jsをつかった図書館関係本リストの絞り込み</a>
+          </li>
+          <li>
+            <a href="./googlechart-sample">Google Chartによるサービス月次統計グラフ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="photo">
+        <h2 class="my-5">手賀沼の写真をカルーセルで</h2>
+        <p>
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="./carousel/img/IMG_2128.JPG" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./carousel/img/IMG_2130.JPG" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./carouel/img/IMG_2132.JPG" alt="Third slide">
+            </div>
+          </div>
+          <a href="#carousel" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a href="#carousel" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </div>
     <hr>
     <img src="img/image01.png" alt="image01" style="width:50%; height:50%"/>
     <hr>
