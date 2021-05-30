@@ -821,11 +821,11 @@
     List.on('searchComplete', function(a){
         $("#hits").html(a.matchingItems.length);
     });
-    $('#search').keyup(function() {
+    $('#search').keydown(function() {
 	    List.filter(function(item) {
 	      return true;
       });
-      $("#hits").html(userList.size);
+      $("#hits").html(a.matchingItems.length);
     });
 
 </script>
