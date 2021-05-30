@@ -10,6 +10,7 @@
   <h1>図書館関係本リストをキーワードで絞り込み</h1>
 <div id="listdata">
   <input id="search" class="search" placeholder="Search" size="50" />
+  <br>
   <button id="button">検索</button>
   ※　NCIDと刊行年月日は対象外
 <P>
@@ -811,7 +812,7 @@
   </div>
 </ul>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
 <script>
     var options = {
         valueNames: ['title', 'creator', 'publisher', 'edition', 'note'],
@@ -822,12 +823,12 @@
     List.on('searchComplete', function(a){
         $("#hits").html(a.matchingItems.length);
     });
-    $('#button').click(function() {
-	    List.filter(function(item) {
-	      return true;
-      });
-      $("#hits").html(a.matchingItems.length);
-    });
+    //$('#button').click(function() {
+	  //  List.filter(function(item) {
+	  //    return true;
+    //  });
+    //  $("#hits").html(a.matchingItems.length);
+    //});
 
 </script>
 </body>
