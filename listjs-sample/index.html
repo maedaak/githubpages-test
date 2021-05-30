@@ -818,7 +818,7 @@
         pagination: true
     };
     var List = new List('listdata', options);
-    $('#search').onkeydown(function() {
+    $('#search').onkeyup(function() {
         $("#hits").html(a.matchingItems.length);
     });
     List.on('searchComplete', function(a){
