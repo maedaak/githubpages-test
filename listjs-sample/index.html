@@ -9,8 +9,8 @@
 <body>
   <h1>図書館関係本リストをキーワードで絞り込み</h1>
 <div id="listdata">
-  <label for="search">文字列をタイプし、Enterキーで絞り込み</label>
-  <input id="search" class="search" placeholder="input any word + [Enter]key " size="50" />
+  <label for="search">文字列をタイプ</label>
+  <input id="search" class="search" placeholder="input any word" size="50" />
   <p>
   <div class="alert">※　NCIDと刊行年月日は対象外</div>
 <P>
@@ -819,6 +819,7 @@
         page: 10,
         pagination: true
     };
+    // ios対応のため changeイベントを拾う
     var listObj = new List('listdata', options);
     $('#search').on('change', function() {
        var searchString = $(this).val();
