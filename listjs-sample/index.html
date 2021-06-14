@@ -819,9 +819,9 @@
         page: 10,
         pagination: true
     };
-    // ios対応のため changeイベントを拾う
+    // ios対応
     var listObj = new List('listdata', options);
-    $('#search').on('change', function() {
+    $('#search').on('input', function() {
        var searchString = $(this).val();
        listObj.search(searchString);
     });
