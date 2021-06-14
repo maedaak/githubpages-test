@@ -819,9 +819,10 @@
         page: 10,
         pagination: true
     };
-    var List = new List('listdata', options);
-    List.on('searchComplete', function(a){
-        $("#hits").html(a.matchingItems.length);
+    var listObj = new List('listdata', options);
+    $('#search').on('keyup', function() {
+       var searchString = $(this).val();
+       listObj.search(searchString);
     });
 
 </script>
