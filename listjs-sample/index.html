@@ -820,7 +820,7 @@
         pagination: true
     };
     var listObj = new List('listdata', options);
-    $('#search').on('keyup', function() {
+    $('#search').on('input', function() {
        var searchString = $(this).val();
        listObj.search(searchString);
     });
