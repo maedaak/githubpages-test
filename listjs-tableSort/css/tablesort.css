@@ -2,7 +2,7 @@
   border:none;]
   color:#1d1fe2;
   text-decoration: none;
-  background-color: #28a8e0;
+  background-color: rgb(32, 89, 252);
   height:30px;
 }
 .sort:focus {
@@ -19,7 +19,6 @@
   top:-10px;
   right:-5px;
 }
-
 .sort.asc:after {
   width: 0;
   height: 0;
