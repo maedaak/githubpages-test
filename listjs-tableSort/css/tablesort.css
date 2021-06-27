@@ -2,10 +2,10 @@
   background-color: blue;
 }
 .sort.asc::after {
-  content: "\002B06";
+  content: "▲";
   padding-left: 3px;
 }
 .sort.desc::after {
-  content: "\002B07";
+  content: "▼";
   padding-left: 3px
 }
