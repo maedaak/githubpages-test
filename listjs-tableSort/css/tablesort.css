@@ -1,5 +1,5 @@
 .sort.asc, .sort.desc {
-  background-color: blue;
+  background-color:rgba(46, 242, 64, 0.38);
 }
 .sort.asc::after {
   content: "▲";
