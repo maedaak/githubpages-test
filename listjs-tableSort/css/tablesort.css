@@ -1,5 +1,5 @@
 .sort.asc, .sort.desc {
-  background-color: yellow;
+  background-color: blue;
 }
 .sort.asc::after {
   content: "\002B06";
