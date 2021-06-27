@@ -1,8 +1,8 @@
 .sort {
   border:none;]
-  color:rgb(32, 89, 252);
+  color:#7fffd4;
   text-decoration: none;
-  background-color: rgb(32, 89, 252);
+  background-color:#ff8c00;
   height:30px;
 }
 .sort:focus {
