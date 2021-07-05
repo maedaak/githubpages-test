@@ -13,13 +13,21 @@
   このページで使っているサンプル図書リストは、国立情報学研究所の「NII総合目録データベース（NACSIS-CAT）」<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="blank">(CC-BYライセンス)</a>を元にしています。<br>
   <strong>「図書館」</strong>に関する書誌データを100件程度抜粋して使いました。
   <p>
+  <!-- list.jsのブロック idはlist.jsの呼び出しに使う　HTML末尾のスクリプトで指定している -->
   <div id="listdata">
     <label for="keyword">文字列をタイプ</label>
     <input id="keyword" class="search" placeholder="input any word" size="50" />
     <p>
-    <div class="alert">※　NCIDと刊行年月日は対象外</div>
+    <div class="alert">※　NCIDと刊行年月日は絞り込み対象外</div>
     <P>
-    <ul class="pagination"></ul><br>
+    <!-- ページ切り替え -->
+    <ul class="pagination"></ul>
+    <br>
+    <!--
+      図書リスト
+         <ul>のclassをlist.js指定の"list"にすることで処理が働く
+         classは任意設定　これによりlist.jsの絞り込み対象を指定 HTML末尾のスクリプトで指定している
+    -->
     <ul class="list">
       <li>
       <dl>
