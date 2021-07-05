@@ -845,7 +845,7 @@
   // list.jsの対象とする<div>のidを指定
   var listObj = new List('listdata', options);
   // ios対応のため、inputイベントで動作させる
-  $('#search').on('input', function() {
+  $('#keyword').on('input', function() {
     var searchString = $(this).val();
     listObj.search(searchString);
   });
