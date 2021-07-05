@@ -8,36 +8,36 @@
   <script type=text/javascript>
   <!--
   function search() {
-      // ベースとなるURLを設定
-      var myTree  = 'https://ci.nii.ac.jp/search?range=0&count=&sortorder=&type=0';
+    // ベースとなるURLを設定
+    var myTree  = 'https://ci.nii.ac.jp/search?range=0&count=&sortorder=&type=0';
 
-      // フォームからキーワードを入手
-      var keyword = document.getElementById("key").value;
-      var field = document.getElementById("field").value;
+    // フォームからキーワードを入手
+    var keyword = document.getElementById("key").value;
+    var field = document.getElementById("field").value;
 
-      // フォームにキーワード書き戻し（入力したキーワードが消えないようにする
-      document.getElementById("key").value = keyword;
+    // フォームにキーワード書き戻し（入力したキーワードが消えないようにする
+    document.getElementById("key").value = keyword;
 
-      // キーワードが空のときはアラートを出す
-      if (keyword == "") { alert("キーワードを入れてください"); }
-      else {
-         var URI_parameter = "";
-         var SEARCH_URL    = "";
-         // UTF8 でURIエンコード
-         URI_parameter = encodeURI(keyword);
-         if (field != "") {
-             URI_parameter = field + '=' + URI_parameter;
-         }
-         URI_parameter = '&' + URI_parameter;
-         SEARCH_URL = myTree.concat(URI_parameter);
-         window.location.replace(SEARCH_URL);
+    // キーワードが空のときはアラートを出す
+    if (keyword == "") { alert("キーワードを入れてください"); }
+    else {
+      var URI_parameter = "";
+      var SEARCH_URL    = "";
+      // UTF8 でURIエンコード
+      URI_parameter = encodeURI(keyword);
+      if (field != "") {
+        URI_parameter = field + '=' + URI_parameter;
       }
+      URI_parameter = '&' + URI_parameter;
+      SEARCH_URL = myTree.concat(URI_parameter);
+      window.location.replace(SEARCH_URL);
+    }
   }
 
   function enterkey_down(key) {
-      if(key === "Enter"){
-          search();
-      }
+    if(key === "Enter"){
+      search();
+    }
   }
   //-->
   </script>
@@ -51,16 +51,16 @@
     <p class="lead">検索窓</p>
     <div class="row">
       <div class="col-md-8 form-group">
-          <input type="search" class="form-control form-control-lg" size=50 id="key" onkeypress="enterkey_down(event.key);">
+        <input type="search" class="form-control form-control-lg" size=50 id="key" onkeypress="enterkey_down(event.key);">
       </div>
       <div class="col-md-4 form-group">
-          <select class="form-control custom-select" id="field">
-              <option value="q">全ての項目</option>
-              <option value="title">タイトル</option>
-              <option value="author">著者</option>
-              <option value="journal">刊行物</option>
-              <option value="publisher">出版社</option>
-          </select>
+        <select class="form-control custom-select" id="field">
+          <option value="q">全ての項目</option>
+          <option value="title">タイトル</option>
+          <option value="author">著者</option>
+          <option value="journal">刊行物</option>
+          <option value="publisher">出版社</option>
+        </select>
       </div>
     </div>
     </p>
