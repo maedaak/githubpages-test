@@ -8,7 +8,7 @@
   <link media="all" href="css/4listjs.css" type="text/css" rel="stylesheet">
   <title>List.jsのサンプルページ</title>
 </head>
-<body>
+<body class="container">
   <h1>図書館関係本リストをキーワードで絞り込み</h1>
   <h2>目録データのソースについて</h2>
   このページで使っているサンプル図書リストは、国立情報学研究所の「NII総合目録データベース（NACSIS-CAT）」<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="blank">(CC-BYライセンス)</a>を元にしています。<br>
@@ -16,13 +16,18 @@
   <p>
   <!-- list.jsのブロック idはlist.jsの呼び出しに使う　HTML末尾のスクリプトで指定している -->
   <div id="listdata">
-    <label for="keyword">文字列をタイプ</label>
-    <input id="keyword" class="search" placeholder="input any word" size="50" />
+    <div class="form-group">
+      <label for="keyword">文字列をタイプ</label>
+      <!-- classをsearchにし、list.jsの検索欄に -->
+      <input id="keyword" class="search form-control form-control-lg" placeholder="input any word" size="50" />
     <p>
     <div class="alert">※　NCIDと刊行年月日は絞り込み対象外</div>
+    </div>
     <P>
     <!-- ページ切り替え -->
-    <ul class="pagination"></ul>
+    <div class="form-group">
+      <ul class="pagination"></ul>
+    </div>
     <br>
     <!--
       図書リスト
@@ -844,5 +849,6 @@
     listObj.search(searchString);
   });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
 </html>
