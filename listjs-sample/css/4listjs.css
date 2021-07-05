@@ -5,6 +5,8 @@ ul.pagination li {
 		margin: 0 0 0 1em;
     padding: 1;
 }
+/*  bootstrapのlist-inlineを使えば不要
 ul {
     list-style: none;
 }
+*/
