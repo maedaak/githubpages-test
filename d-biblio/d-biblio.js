@@ -40,12 +40,12 @@ window.onload = function() {
 
     var count = 0;
     this.addEventListener('enterframe', function() {
-      // label1 move
+      // label1 弧を描く移動
       if (count < 320) {
    	    label1.x = (Math.sin(count / 90) * 100) + 200;
    	    label1.y = (Math.cos(count / 90) * 100) + 200;
       }
-      // label2 move
+      // label2 斜め移動
       label2.x --;
       label2.y ++;
       label2.y ++;
