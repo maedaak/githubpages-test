@@ -1,32 +1,33 @@
-<html>
-<head lang="ja">
-<meta charset="utf-8">
-<title>Google Chartによるサービス月次統計グラフ</title>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script>
-  google.load('visualization', '1', {'packages':['corechart']});
-  google.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['月', '件数'],
-      ['4月', 10721],
-      ['5月', 2225],
-      ['6月', 3161],
-      ['7月', 3192],
-      ['8月', 3113],
-      ['9月', 4568],
-      ['10月', 8558],
-      ['11月', 16636],
-      ['12月', 2915],
-      ['1月', 1976],
-      ['2月', 2121],
-      ['3月', 3173]
-    ]);
-    var options = { title: 'サービスアクセス件数' };
-    var chart = new google.visualization.ColumnChart(document.getElementById('chart_draw'));
-    chart.draw(data, options);
-  }
-</script>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Google Chartによるサービス月次統計グラフ</title>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script>
+    google.load('visualization', '1', {'packages':['corechart']});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['月', '件数'],
+        ['4月', 10721],
+        ['5月', 2225],
+        ['6月', 3161],
+        ['7月', 3192],
+        ['8月', 3113],
+        ['9月', 4568],
+        ['10月', 8558],
+        ['11月', 16636],
+        ['12月', 2915],
+        ['1月', 1976],
+        ['2月', 2121],
+        ['3月', 3173]
+      ]);
+      var options = { title: 'サービスアクセス件数' };
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_draw'));
+      chart.draw(data, options);
+    }
+  </script>
 </head>
 <body>
   <h1>Google Chartによるサービス月次統計グラフ</h1>
