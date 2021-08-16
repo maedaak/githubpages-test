@@ -12,8 +12,7 @@
   <h1>図書館関係本リストをキーワードで絞り込み</h1>
   <br>
   <h2>目録データのソースについて</h2>
-  このページで使っているサンプル図書リストは、国立情報学研究所の「NII総合目録データベース（NACSIS-CAT）」<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">(CC-BYライセンス)</a>を元にしています。</p>
-      <p>
+  このページで使っているサンプル図書リストは、国立情報学研究所の「NII総合目録データベース（NACSIS-CAT）」<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">(CC-BYライセンス)</a>を元にしています。
   <strong>「図書館」</strong>に関する書誌データを100件程度抜粋して使いました。
   <br>
   <!-- list.jsのブロック idはlist.jsの呼び出しに使う　HTML末尾のスクリプトで指定している -->
@@ -912,10 +911,10 @@
   // list.jsの対象とする<div>のidを指定
   var listObj = new List('listdata', options);
   // ios対応のため、inputイベントで動作させる
-  $('#keyword').on('input', function() {
-    var searchString = $(this).val();
-    listObj.search(searchString);
-  });
+  // $('#keyword').on('input', function() {
+  //   var searchString = $(this).val();
+  //   listObj.search(searchString);
+  // });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
