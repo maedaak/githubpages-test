@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IIIF test</title>
+  </head>
+  <body>
+    <div id="openseadragon1" style="width: 800px; height: 600px;"></div>
+    <script src="https://cdn.jsdelivr.net/npm/openseadragon@2.4.2/build/openseadragon/openseadragon.min.js" integrity="sha256-NMxPj6Qf1CWCzNQfKoFU8Jx18ToY4OWgnUO1cJWTWuw=" crossorigin="anonymous"></script>
+    <script>
+      function initOpenSeadragon() {
+        OpenSeadragon({
+          id: "openseadragon1",
+          minZoomImageRatio: 1,
+          prefixUrl: "openseadragon200/images/",
+          tileSources: "https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif/1de1d067-53a5-4981-a122-daa047367056/manifest",
+          crossOriginPolicy: false
+        });
+      }
+      window.onload = initOpenSeadragon;
+      document.addEventListener("page:load", initOpenSeadragon);
+    </script>
+  </body>
+</html>
